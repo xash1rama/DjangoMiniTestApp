@@ -1,0 +1,58 @@
+<!-- tasks.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привет</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Подключаем современный шрифт -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрируем содержимое по горизонтали */
+            justify-content: center; /* Центрируем содержимое по вертикали */
+            height: 100vh; /* Задаем высоту на весь экран */
+            margin: 0; /* Убираем отступы */
+            font-family: 'Roboto', sans-serif; /* Устанавливаем шрифт */
+            background-color: #f4f4f4; /* Цвет фона страницы */
+        }
+        h1 {
+            color: #333; /* Цвет заголовка */
+            margin-bottom: 20px; /* Отступ снизу для заголовка */
+        }
+        .button-container {
+            text-align: center; /* Центрируем текст */
+            margin-top: 20px; /* Добавляем отступ сверху для кнопки */
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px; /* Размер кнопки */
+            font-size: 18px; /* Размер шрифта */
+            color: white;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); /* Градиент для кнопки */
+            border: none;
+            border-radius: 50px; /* Скругленные углы */
+            text-decoration: none; /* Убираем подчеркивание */
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
+            transition: background 0.3s, transform 0.3s; /* Плавный переход */
+        }
+        .button:hover {
+            transform: translateY(-2px); /* Подъем кнопки при наведении */
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%); /* Изменение градиента при наведении */
+        }
+        .button:active {
+            transform: translateY(0); /* Возврат кнопки в исходное положение при нажатии */
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на главную страницу!</h1>
+    <div class="button-container">
+        <a href="http://127.0.0.1:8000/tasks" class="button">Для проверки нажми кнопку</a>
+    </div>
+    <img src="{% static 'images/placeholder.png' %}" alt="Заглушка" />
+</body>
+</html>
